@@ -56,9 +56,11 @@ namespace RestApiClient.Core.UnitTests.Response
         public async Task ParseAsync_DeserializesContentWithHelpOfSerializer()
         {
             // arrange
-            var expectedContent = "Test";
-            var responseMessage = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
-            responseMessage.Content = new StringContent(expectedContent);
+            const string expectedContent = "Test";
+            var responseMessage = new HttpResponseMessage(System.Net.HttpStatusCode.OK)
+            {
+                Content = new StringContent(expectedContent)
+            };
             var serializer = new Mock<ISerializer>();
             serializer
                 .Setup(x => x.DeserializeAsync<string>(It.Is<Stream>(s => expectedContent.Equals(new StreamReader(s).ReadToEnd()))))
@@ -66,7 +68,7 @@ namespace RestApiClient.Core.UnitTests.Response
 
             // act
             var response = new ApiResponse(serializer.Object, responseMessage);
-            var responseContent = await response.ParseAsync<string>();
+            var responseContent = await response.ParseAsync<string>().ConfigureAwait(false);
 
             // assert
             Assert.Equal(expectedContent, responseContent);
