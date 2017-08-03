@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>0.1.0</Version>
+    <Company />
+    <Product />
+    <Description>RestApiClient is a thin wrapper around the .net HttpClient and makes accessing your API a breeze. It takes away the necessary boilerplate code to implement a fast and efficient communication with your API endpoints.</Description>
+    <PackageLicenseUrl>https://github.com/crehmann/RestApiClient/blob/develop/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl></PackageProjectUrl>
+    <Authors>crehmann</Authors>
+    <RepositoryUrl>https://github.com/crehmann/RestApiClient</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>
