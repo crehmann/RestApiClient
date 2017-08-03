@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <Version>0.1.0</Version>
+    <Authors>crehmann</Authors>
+    <Company />
+    <Product />
+    <Description>Extension method to use RestApiClient together with the CSharpFunctionalExtensions nuget package</Description>
+    <PackageLicenseUrl>https://github.com/crehmann/RestApiClient/blob/develop/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/crehmann/RestApiClient</RepositoryUrl>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CSharpFunctionalExtensions" Version="1.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RestApiClient.Core\RestApiClient.Core.csproj" />
+  </ItemGroup>
+
+</Project>
