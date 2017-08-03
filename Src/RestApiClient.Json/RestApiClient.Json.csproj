@@ -13,6 +13,8 @@ RestApiClient.Json is using JSON.NET for adding JSON de/serialization for RestAp
     <Product>RestApiClient.Json</Product>
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
     <FileVersion>0.1.0.0</FileVersion>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

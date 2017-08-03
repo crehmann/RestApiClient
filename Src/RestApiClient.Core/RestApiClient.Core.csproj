@@ -11,6 +11,7 @@
     <PackageProjectUrl></PackageProjectUrl>
     <Authors>crehmann</Authors>
     <RepositoryUrl>https://github.com/crehmann/RestApiClient</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
 </Project>
