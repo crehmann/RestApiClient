@@ -1,6 +1,6 @@
 # RestApiClient
 
-> Note: this library is under development. Release comming soon on nuget.
+> Note: this library is under development. An early alpha can be found on [nuget](https://www.nuget.org/packages/RestApiClient.Json/)
 
 RestApiClient is a thin wrapper around the .net HttpClient and makes accessing your API a breeze. It takes away the necessary boilerplate code to implement a fast and efficient communication with your API endpoints.
 
