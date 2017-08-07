@@ -1,5 +1,4 @@
-﻿using RestApiClient.Core.Diagnostic;
-using RestApiClient.Json.Serialization;
+﻿using RestApiClient.Json.Serialization;
 using System.Net.Http;
 
 namespace RestApiClient.Json
@@ -11,11 +10,16 @@ namespace RestApiClient.Json
         }
 
         public JsonApiClient(HttpMessageHandler httpMessageHandler)
-            : base(new HttpClient(new LoggingHandler(httpMessageHandler)), new JsonSerializer())
+            : base(new HttpClient(httpMessageHandler), new JsonSerializer())
         {
         }
 
-        public JsonApiClient() : this(new HttpClient(new LoggingHandler(new HttpClientHandler())))
+        public JsonApiClient(HttpClientHandler httpClientHandler)
+            : base(new HttpClient(httpClientHandler), new JsonSerializer())
+        {
+        }
+
+        public JsonApiClient() : this(new HttpClient())
         {
 
         }

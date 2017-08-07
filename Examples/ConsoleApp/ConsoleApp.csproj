@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CSharpFunctionalExtensions" Version="1.7.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Src\RestApiClient.Core\RestApiClient.Core.csproj" />
+    <ProjectReference Include="..\..\Src\RestApiClient.FunctionalExtensions\RestApiClient.FunctionalExtensions.csproj" />
+    <ProjectReference Include="..\..\Src\RestApiClient.Json\RestApiClient.Json.csproj" />
+  </ItemGroup>
+
+</Project>

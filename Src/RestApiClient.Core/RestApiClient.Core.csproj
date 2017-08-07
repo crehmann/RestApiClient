@@ -14,4 +14,8 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Diagnostics.Tracing" Version="4.3.0" />
+  </ItemGroup>
+
 </Project>

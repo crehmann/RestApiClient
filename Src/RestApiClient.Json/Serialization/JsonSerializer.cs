@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using RestApiClient.Core.Exceptions;
 using RestApiClient.Core.Serialization;
 using System.IO;
 using System.Net.Http;
@@ -26,7 +27,14 @@ namespace RestApiClient.Json.Serialization
                 using (var reader = new StreamReader(stream))
                 using (var json = new JsonTextReader(reader))
                 {
-                    return Serializer.Deserialize<TContent>(json);
+                    try
+                    {
+                        return Serializer.Deserialize<TContent>(json);
+                    }
+                    catch(JsonException ex)
+                    {
+                        throw new DeserializationException($"Deserialization failed: {ex.Message}",ex);
+                    }
                 }
             });
         }

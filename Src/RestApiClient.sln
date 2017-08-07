@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestApiClient.Json", "RestA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestApiClient.Json.UnitTests", "RestApiClient.Json.UnitTests\RestApiClient.Json.UnitTests.csproj", "{154BC8B5-D7BF-45CA-AF01-D5935E80D8F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestApiClient.FunctionalExtensions", "RestApiClient.FunctionalExtensions\RestApiClient.FunctionalExtensions.csproj", "{BE42F6B1-CBA7-4904-8FFA-8AA6C5AFB541}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestApiClient.FunctionalExtensions", "RestApiClient.FunctionalExtensions\RestApiClient.FunctionalExtensions.csproj", "{BE42F6B1-CBA7-4904-8FFA-8AA6C5AFB541}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{7247801E-CB9A-4511-96D3-4935155E8361}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "..\Examples\ConsoleApp\ConsoleApp.csproj", "{D066AEBB-9A0E-4C97-AB13-D3EEBF7C89BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,10 @@ Global
 		{BE42F6B1-CBA7-4904-8FFA-8AA6C5AFB541}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE42F6B1-CBA7-4904-8FFA-8AA6C5AFB541}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE42F6B1-CBA7-4904-8FFA-8AA6C5AFB541}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D066AEBB-9A0E-4C97-AB13-D3EEBF7C89BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D066AEBB-9A0E-4C97-AB13-D3EEBF7C89BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D066AEBB-9A0E-4C97-AB13-D3EEBF7C89BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D066AEBB-9A0E-4C97-AB13-D3EEBF7C89BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,5 +56,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{173A739E-4529-46EB-81E3-01CBED953BF6} = {7087F9B7-9846-4325-B49C-4A65D727099B}
 		{154BC8B5-D7BF-45CA-AF01-D5935E80D8F9} = {7087F9B7-9846-4325-B49C-4A65D727099B}
+		{D066AEBB-9A0E-4C97-AB13-D3EEBF7C89BF} = {7247801E-CB9A-4511-96D3-4935155E8361}
 	EndGlobalSection
 EndGlobal
