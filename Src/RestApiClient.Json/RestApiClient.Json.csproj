@@ -2,17 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <Version>0.1.1-alpha</Version>
+    <Version>0.1.2</Version>
     <Authors>crehmann</Authors>
     <Company />
     <RepositoryUrl>https://github.com/crehmann/RestApiClient</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/crehmann/RestApiClient/blob/develop/LICENSE</PackageLicenseUrl>
-    <Description>RestApiClient is a thin wrapper around the .net HttpClient and makes accessing your API a breeze. It takes away the necessary boilerplate code to implement a fast and efficient communication with your API endpoints.
-
-RestApiClient.Json is using JSON.NET for adding JSON de/serialization for RestApiClient.Core</Description>
+    <Description>RestApiClient.Json is using JSON.NET for adding JSON de/serialization for RestApiClient.Core</Description>
     <Product>RestApiClient.Json</Product>
-    <AssemblyVersion>0.1.1.0</AssemblyVersion>
-    <FileVersion>0.1.1.0</FileVersion>
+    <AssemblyVersion>0.1.2.0</AssemblyVersion>
+    <FileVersion>0.1.2.0</FileVersion>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
