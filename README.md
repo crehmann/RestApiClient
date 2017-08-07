@@ -1,13 +1,17 @@
 # RestApiClient
 
-> Note: this library is under development. An early alpha can be found on [nuget](https://www.nuget.org/packages/RestApiClient.Json/)
+> Note: this library is under development. A preview can be found on [nuget](https://www.nuget.org/packages/RestApiClient.Json/)
 
 RestApiClient is a thin wrapper around the .net HttpClient and makes accessing your API a breeze. It takes away the necessary boilerplate code to implement a fast and efficient communication with your API endpoints.
 
 ## Features
 * JSON de/serialization using JSON.NET
 * GZIP compression for requests
-* Function extensions method to use it together with [CSharpFunctionalExtensions](https://github.com/vkhorikov/CSharpFunctionalExtensions)
+* Functional extensions method to use it together with [CSharpFunctionalExtensions](https://github.com/vkhorikov/CSharpFunctionalExtensions)
+
+## Planned
+* Using Polly for retry logic
+* Helper methods to use it together with Rx
 
 ## Examples
 A console application example can be found in the `Examples/ConsoleApp` folder.
@@ -47,7 +51,7 @@ if (result.IsSuccess)
 ```
 
 ### Using the JsonApiClient in a more functional way
-The [RestApiClient.FunctionalExtensions](https://www.nuget.org/packages/RestApiClient.FunctionalExtensions/) provides extensions method to use the RestApiClient togther with the [CSharpFunctionalExtensions](https://github.com/vkhorikov/CSharpFunctionalExtensions) in a more functional way:
+The [RestApiClient.FunctionalExtensions](https://www.nuget.org/packages/RestApiClient.FunctionalExtensions/) provides extensions method to use the RestApiClient together  with the [CSharpFunctionalExtensions](https://github.com/vkhorikov/CSharpFunctionalExtensions) in a more functional way:
 
 ```csharp
 public Task<Result<UserInfo>> GetUserInfoAsync(string username) => ApiRequest.To($"https://api.github.com/users/{username}")
