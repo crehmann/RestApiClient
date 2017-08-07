@@ -34,7 +34,6 @@ namespace RestApiClient.Core.UnitTests.Response
             Assert.Throws<InvalidOperationException>(() => result.Response);
             Assert.Equal(ResultState.RequestError, result.State);
             Assert.True(result.IsRequestError);
-            Assert.False(result.IsCancelled);
             Assert.False(result.IsSuccess);
         }
 
@@ -64,35 +63,7 @@ namespace RestApiClient.Core.UnitTests.Response
             Assert.Throws<InvalidOperationException>(() => result.Exception);
             Assert.Equal(ResultState.Success, result.State);
             Assert.False(result.IsRequestError);
-            Assert.False(result.IsCancelled);
             Assert.True(result.IsSuccess);
-        }
-
-        [Fact]
-        public void FromRequestCancellation_ThrowsException_WhenArgumentInvalid()
-        {
-            Assert.Throws<ArgumentNullException>(() => ApiResult.FromRequestCancellation(null));
-        }
-
-        [Fact]
-        public void FromRequestCancellation_ShouldInitializePropertiesCorrect()
-        {
-            // arrange
-            var expectedRequest = ApiRequest.To(string.Empty);
-
-            // act
-            expectedRequest.Cancel(false);
-            var result = ApiResult.FromRequestCancellation(expectedRequest);
-
-            // assert
-            Assert.Throws<InvalidOperationException>(() => ApiResult.FromRequestCancellation(ApiRequest.To(string.Empty)));
-            Assert.Equal(expectedRequest, result.Request);
-            Assert.Throws<InvalidOperationException>(() => result.Response);
-            Assert.Throws<InvalidOperationException>(() => result.Exception);
-            Assert.Equal(ResultState.Cancelled, result.State);
-            Assert.False(result.IsRequestError);
-            Assert.True(result.IsCancelled);
-            Assert.False(result.IsSuccess);
         }
     }
 }

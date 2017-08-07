@@ -21,5 +21,14 @@ namespace RestApiClient.Core.Utils
                 return await fn(disposable).ConfigureAwait(false);
             }
         }
+
+        public static async Task<TResult> UsingAsync<TDisposable, TResult>(Func<TDisposable> factory, Func<TDisposable, Task<TResult>> fn)
+            where TDisposable : IDisposable
+        {
+            using (var disposable = factory())
+            {
+                return await fn(disposable).ConfigureAwait(false);
+            }
+        }
     }
 }

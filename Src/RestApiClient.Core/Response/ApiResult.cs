@@ -56,8 +56,6 @@ namespace RestApiClient.Core.Response
 
         public bool IsSuccess => State == ResultState.Success;
 
-        public bool IsCancelled => State == ResultState.Cancelled;
-
         public bool IsRequestError => State == ResultState.RequestError;
 
         public bool IsStatusCodeError => State == ResultState.StatusCodeError;
@@ -69,7 +67,6 @@ namespace RestApiClient.Core.Response
             [DebuggerStepThrough]
             get
             {
-                if (IsCancelled) throw new InvalidOperationException("There is no response if the request was cancelled.");
                 if (IsRequestError) throw new InvalidOperationException("There is no response if the request failed.");
                 return _apiResponse;
             }
@@ -82,7 +79,5 @@ namespace RestApiClient.Core.Response
         public static ApiResult FromResponse(ApiRequest apiRequest, ApiResponse apiResponse) => new ApiResult(apiRequest, apiResponse);
 
         public static ApiResult FromError(ApiRequest apiRequest, Exception exception) => new ApiResult(apiRequest, exception);
-
-        public static ApiResult FromRequestCancellation(ApiRequest request) => new ApiResult(request);
     }
 }

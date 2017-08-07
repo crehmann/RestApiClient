@@ -81,10 +81,6 @@ namespace RestApiClient.Core
                 var responseMessage = await requestFunction().ConfigureAwait(false);
                 return ApiResult.FromResponse(request, new ApiResponse(_serializer, responseMessage));
             }
-            catch (OperationCanceledException)
-            {
-                return await Task.FromResult(ApiResult.FromRequestCancellation(request)).ConfigureAwait(false);
-            }
             catch (HttpRequestException ex)
             {
                 return await Task.FromResult(ApiResult.FromError(request, ex)).ConfigureAwait(false);
