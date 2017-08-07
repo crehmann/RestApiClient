@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>0.1.0</Version>
+    <Version>0.1.1-alpha</Version>
     <Company />
     <Product />
     <Description>RestApiClient is a thin wrapper around the .net HttpClient and makes accessing your API a breeze. It takes away the necessary boilerplate code to implement a fast and efficient communication with your API endpoints.</Description>
